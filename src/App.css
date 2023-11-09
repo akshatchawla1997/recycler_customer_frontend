@@ -1,0 +1,17 @@
+#root {
+  /* max-width: 1280px; */
+  /* margin: 0 auto; */
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.gfgvs {
+  width: 100%;
+
+  @media screen and (max-width: 1280px) {
+    flex-direction: column;
+  }
+}

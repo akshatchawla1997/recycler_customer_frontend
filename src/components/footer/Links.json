@@ -1,0 +1,9 @@
+[
+  { "label": "About Us", "path": "/" },
+  { "label": "Rate Us", "path": "/" },
+  { "label": "Contact Us", "path": "/" },
+  { "label": "Our Services", "path": "/" },
+  { "label": "Scrap Rate", "path": "/scraprates" },
+  { "label": "FAQ's", "path": "/" },
+  { "label": "Privacy Policy", "path": "/privacy-policy" }
+]

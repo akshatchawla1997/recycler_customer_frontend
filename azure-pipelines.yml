@@ -1,0 +1,56 @@
+trigger:
+  branches:
+    include:
+    - main
+
+# no PR triggers
+pr: none
+
+pool:
+  vmImage: ubuntu-latest
+
+jobs:
+  - job: 
+    steps:
+
+    # - task: SonarCloudPrepare@1
+    #   inputs:
+    #     SonarCloud: 'sonarcloudconnection'
+    #     organization: 'leonidsconsultants0154'
+    #     scannerMode: 'CLI'
+    #     configMode: 'file'
+
+    - task: Npm@1
+      inputs:
+        command: 'install'
+      displayName: 'npm install'
+      
+    - task: Npm@1
+      inputs:
+        command: 'custom'
+        customCommand: 'run build'
+      displayName: 'npm build complete'
+    
+    # - task: SonarCloudAnalyze@1
+
+    # - task: SonarCloudPublish@1
+    #   inputs:
+    #     pollingTimeoutSec: '300'
+    
+    # - task: ArchiveFiles@2
+    #   displayName: 'Archive files'
+    #   inputs:
+    #     rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
+    #     includeRootFolder: false
+    #     archiveType: zip
+    #     archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+    #     replaceExistingArchive: true
+
+    # - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+    #   artifact: drop
+
+
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: dist
+      displayName: 'Publish Artifact: drop'

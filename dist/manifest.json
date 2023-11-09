@@ -1,0 +1,34 @@
+{
+  "name": "kabadijee",
+  "short_name": "platform.kabadijee",
+  "theme_color": "#2AAA8A",
+  "background_color": "#ffffff",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/favicons/kabadijee72.png",
+      "sizes": "72X72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/favicons/kabadijee96.png",
+      "sizes": "96X96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/favicons/kabadijee128.png",
+      "sizes": "128X128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/favicons/kabadijee512.png",
+      "sizes": "512X512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ]
+}
